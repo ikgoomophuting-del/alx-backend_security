@@ -1,5 +1,11 @@
 from celery.schedules import crontab
 
+
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULE = {
     'detect-suspicious-ips-hourly': {
         'task': 'ip_tracking.tasks.detect_suspicious_activity',
@@ -14,6 +20,7 @@ INSTALLED_APPS = [
     'ip_tracking.apps.IpTrackingConfig',
     
 ]
+
 MIDDLEWARE = [
     # Default Django middlewares...
     'django.middleware.security.SecurityMiddleware',
@@ -31,3 +38,5 @@ MIDDLEWARE = [
 ALLOWED_HOSTS = ['yourapp.pythonanywhere.com', 'yourapp.onrender.com', 'localhost']
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
+
+
