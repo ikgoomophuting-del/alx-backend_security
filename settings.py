@@ -27,3 +27,7 @@ MIDDLEWARE = [
     # Custom IP tracking middleware
     'ip_tracking.middleware.RequestLoggingMiddleware',
 ]
+
+ALLOWED_HOSTS = ['yourapp.pythonanywhere.com', 'yourapp.onrender.com', 'localhost']
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = '/static/'
