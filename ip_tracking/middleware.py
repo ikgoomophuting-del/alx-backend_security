@@ -1,4 +1,5 @@
 from django.http import HttpResponseForbidden
+from django_ip_geolocation.fields import CountryField, CityField
 from django.core.cache import cache
 from .models import RequestLog, BlockedIP
 import logging
