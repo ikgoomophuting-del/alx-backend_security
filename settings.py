@@ -11,6 +11,8 @@ INSTALLED_APPS = [
     # default Django apps...
     'ratelimit',
     'ip_tracking',
+    'ip_tracking.apps.IpTrackingConfig',
+    
 ]
 MIDDLEWARE = [
     # Default Django middlewares...
