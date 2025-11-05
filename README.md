@@ -25,11 +25,13 @@ pip install -r requirements.txt
 4. Start server:
 
    python manage.py runserver
+---
 
  Useful Commands
 python manage.py block_ip 192.168.1.10
 celery -A alx_backend_security worker -B
 
+---
 Folder Structure
 
 alx-backend-security/
@@ -44,15 +46,17 @@ alx-backend-security/
 │       └── commands/
 │           └── block_ip.py
 │
-├── settings.py
-│── __init__.py
-│── views.
-│── middleware.py
-│── views.py
-│── tasks.py
-│
-│
-│
-│
 └── settings.py
+
+---
+
+##  `requirements.txt`
+```text
+Django>=4.2
+django-ratelimit>=3.0
+django-ipgeolocation>=1.4
+celery>=5.3
+redis>=5.0
+requests
+
 
