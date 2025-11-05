@@ -1,3 +1,8 @@
+INSTALLED_APPS = [
+    # default Django apps...
+    'ratelimit',
+    'ip_tracking',
+]
 MIDDLEWARE = [
     # Default Django middlewares...
     'django.middleware.security.SecurityMiddleware',
