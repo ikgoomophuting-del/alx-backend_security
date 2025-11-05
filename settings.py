@@ -13,12 +13,13 @@ CELERY_BEAT_SCHEDULE = {
     },
 }
 
+
 INSTALLED_APPS = [
     # default Django apps...
     'ratelimit',
     'ip_tracking',
     'ip_tracking.apps.IpTrackingConfig',
-    
+   += ['django_celery_results']
 ]
 
 MIDDLEWARE = [
