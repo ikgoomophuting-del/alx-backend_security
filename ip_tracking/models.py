@@ -1,4 +1,5 @@
 from django.db import models
+from django_ip_geolocation.fields import CountryField, CityField
 
 class RequestLog(models.Model):
     ip_address = models.GenericIPAddressField()
