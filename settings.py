@@ -1,3 +1,12 @@
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'detect-suspicious-ips-hourly': {
+        'task': 'ip_tracking.tasks.detect_suspicious_activity',
+        'schedule': crontab(minute=0, hour='*'),
+    },
+}
+
 INSTALLED_APPS = [
     # default Django apps...
     'ratelimit',
