@@ -5,7 +5,7 @@ from celery.schedules import crontab
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alx_backend_security.settings')
 
-app = Celery('alx_backend_security')
+app = celery('alx_backend_security')
 
 # Load configuration from Django settings, using a namespace to prevent collisions.
 app.config_from_object('django.conf:settings', namespace='CELERY')
