@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'ratelimit',
     'ip_tracking',
     'ip_tracking.apps.IpTrackingConfig',
-   += ['django_celery_results']
+    'django_celery_results'
 ]
 
 MIDDLEWARE = [
