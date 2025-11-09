@@ -28,9 +28,13 @@ INSTALLED_APPS = [
     # third-party apps
     'ratelimit',
     'django_celery_results',
-
+ 
     # local apps
     'ip_tracking',
+    'ip_tracking.apps.IpTrackingConfig',
+    'rest_framework',
+    'drf_yasg',
+
 ]
 
 # --- MIDDLEWARE ---
