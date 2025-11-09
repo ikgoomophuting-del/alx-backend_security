@@ -14,7 +14,14 @@ ALLOWED_HOSTS = [
     'yourapp.pythonanywhere.com',
     'localhost',
     '127.0.0.1',
+    
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # --- INSTALLED APPS ---
 INSTALLED_APPS = [
