@@ -6,3 +6,4 @@ redis>=5.0
 django-celery-results
 drf-yasg
 gunicorn
+djangorestframework
