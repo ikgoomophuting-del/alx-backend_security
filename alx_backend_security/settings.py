@@ -14,7 +14,14 @@ ALLOWED_HOSTS = [
     'yourapp.pythonanywhere.com',
     'localhost',
     '127.0.0.1',
+    
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # --- INSTALLED APPS ---
 INSTALLED_APPS = [
@@ -28,10 +35,19 @@ INSTALLED_APPS = [
     # third-party apps
     'ratelimit',
     'django_celery_results',
-
+ 
     # local apps
     'ip_tracking',
+    'ip_tracking.apps.IpTrackingConfig',
+    'rest_framework',
+    'drf_yasg',
+
 ]
+
+'DEFAULT_AUTHENTICATION_CLASSES': [
+    'rest_framework.authentication.SessionAuthentication',
+    'rest_framework.authentication.BasicAuthentication',
+],
 
 # --- MIDDLEWARE ---
 MIDDLEWARE = [
