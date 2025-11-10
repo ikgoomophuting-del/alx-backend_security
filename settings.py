@@ -5,6 +5,13 @@ from celery.schedules import crontab
 # --- BASE DIR ---
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "geo_cache",
+    }
+}
+
 # --- SECURITY ---
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'replace-this-key')
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
