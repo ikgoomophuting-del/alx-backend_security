@@ -1,1 +1,2 @@
+worker: celery -A alx_bckend_security worker --loglevel=INFO
 
