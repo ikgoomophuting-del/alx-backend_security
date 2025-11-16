@@ -7,3 +7,4 @@ django-celery-results
 drf-yasg
 gunicorn
 djangorestframework
+django-ratelimit==4.0.0
