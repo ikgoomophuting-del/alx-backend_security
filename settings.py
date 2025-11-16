@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third-party apps
-    'ratelimit',
     'django_celery_results',
  
     # local apps
