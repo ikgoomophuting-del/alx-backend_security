@@ -1,1 +1,2 @@
+beat: celery -A alx_bckend_security beat --loglevel=INFO
 
